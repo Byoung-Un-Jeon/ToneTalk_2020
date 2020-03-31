@@ -3,13 +3,17 @@ import utils
 import cv2
 from openpyxl import Workbook
 
+import matplotlib.pyplot as plt
+import colorsys
+import numpy as np
+
 #엑셀로 보내기 위해서 엑셀 환경 만들어준다.
 write_wb = Workbook()
 write_ws = write_wb.active
 #1,1 칸에는 result를 입력해준다.
 write_ws.cell(1, 1, "result")
 #괄호 안에 들어가는게 범위 655개 다하면 시간이 걸리니 테스트할때는 10개만.
-for i in range(10):
+for i in range(20):
     #openCV를 이용해 이미지를 읽어온다.
     image = cv2.imread("images/lip_data/test"+ str(i+1) +".png")
     #기본적으로 BGR값으로 읽어오기 때문에 RGB값으로 변환시켜준다.

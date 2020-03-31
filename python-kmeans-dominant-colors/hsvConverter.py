@@ -1,7 +1,7 @@
 import cv2
 
 # 이미지파일을 컬러로 읽어온다.
-img_color = cv2.imread('images/test4.png')
+img_color = cv2.imread('images/lip_data/test4.png')
 # 이미지의 높이와 너비를 갖고온다.
 height,width = img_color.shape[:2]
 # hsv이미지로 변환한다.
